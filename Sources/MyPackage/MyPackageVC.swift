@@ -6,10 +6,20 @@
 //
 
 import UIKit
+import Foundation
 
-class MyPackageVC: UIViewController {
-
-    override func viewDidLoad() {
+@objc(MyPackageVC)
+public class MyPackageVC: UIViewController {
+    
+    public init() {
+        super.init(nibName: "MyPackageVC", bundle: Bundle.module)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
 
